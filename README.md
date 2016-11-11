@@ -18,7 +18,6 @@ clipboardManager
 ## API
 
 ### clipboardManager.subscribe(callback)
-
 Subscribe to changes to the clipboard. Callback will receive a **ClipBoardData** Object:
 ```javascript
 //defaults:
@@ -34,3 +33,16 @@ Subscribe to changes to the clipboard. Callback will receive a **ClipBoardData**
   time: new Date().getTime()
 }
 ```
+
+### clipboardManager.pause()
+Stops notifying subscribers
+
+### clipboardManager.resume()
+Resumes notifying subscribers
+
+### clipboardManager.write(data, [type])
+Writes provided **ClipBoardData** to the clipboard.
+If a type is provided, it will write it as that type, else it will analyse the formats property of the data and chose an appropriate type.
+
+### clipboardManager.start()
+start monitoring the clipboard
