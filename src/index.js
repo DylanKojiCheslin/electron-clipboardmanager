@@ -1,44 +1,44 @@
-const hash = require('object-hash')
-function ClipBoardData (clipboard) {
-  const formats = clipboard.availableFormats()
-  formats.forEach((format) => {
-    Object.assign(this, {
-      formats: formats,
-      HTML: null,
-      text: null,
-      RTF: null,
-      image: null
-    })
-    switch (format) {
-      case 'text/html':
-        Object.assign(this, {
-          HTML: clipboard.readHTML()
-        })
-        break
-      case 'text/plain':
-        Object.assign(this, {
-          text: clipboard.readText()
-        })
-        break
-      case 'text/rtf':
-        Object.assign(this, {
-          RTF: clipboard.readRTF()
-        })
-        break
-      case 'image/png':
-        Object.assign(this, {
-          image: clipboard.readImage()
-        })
-        break
-    }
-  })
-  this._hash = hash(this, {
-    algorithm: 'md5'
-  })
-  this.time = new Date().getTime()
-  return this
-}
 function ClipboardManager (optionsIn) {
+  const hash = require('object-hash')
+  function ClipBoardData (clipboard) {
+    const formats = clipboard.availableFormats()
+    formats.forEach((format) => {
+      Object.assign(this, {
+        formats: formats,
+        HTML: null,
+        text: null,
+        RTF: null,
+        image: null
+      })
+      switch (format) {
+        case 'text/html':
+          Object.assign(this, {
+            HTML: clipboard.readHTML()
+          })
+          break
+        case 'text/plain':
+          Object.assign(this, {
+            text: clipboard.readText()
+          })
+          break
+        case 'text/rtf':
+          Object.assign(this, {
+            RTF: clipboard.readRTF()
+          })
+          break
+        case 'image/png':
+          Object.assign(this, {
+            image: clipboard.readImage()
+          })
+          break
+      }
+    })
+    this._hash = hash(this, {
+      algorithm: 'md5'
+    })
+    this.time = new Date().getTime()
+    return this
+  }
   const {clipboard} = require('electron')
   const subs = []
   let last = null
