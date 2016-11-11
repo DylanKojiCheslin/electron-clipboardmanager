@@ -1,0 +1,15 @@
+{
+  "name": "electron-clipboardmanager",
+  "version": "1.0.0",
+  "description": "ES2015 clipboard utility for electron apps",
+  "main": "src/index.js",
+  "author": { 
+    "name" : "Michael Klein", 
+    "email" : "michael@michaelinthe.cloud", 
+    "url" : "https://michaelinthe.cloud/"
+  ,
+  "license": "MIT",
+  "dependencies": {
+    "object-hash": "^1.1.5"
+  }
+}
