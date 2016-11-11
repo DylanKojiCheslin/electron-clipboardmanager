@@ -14,3 +14,23 @@ clipboardManager
 clipboardManager
   .start() //start monitoring the clipboard
 ```
+
+## API
+
+### clipboardManager.subscribe(callback)
+
+Subscribe to changes to the clipboard. Callback will receive a **ClipBoardData** Object:
+```javascript
+//defaults:
+{
+  formats: [] //array of formats the data fits (['text/html','text/plain','text/rtf','image/png'])
+  
+  //data:
+  HTML: null,
+  text: null,
+  RTF: null,
+  image: null,
+
+  time: new Date().getTime()
+}
+```
