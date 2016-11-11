@@ -104,4 +104,4 @@ function ClipboardManager (optionsIn) {
   })
   return this
 }
-export default ClipboardManager
+module.exports = ClipboardManager
