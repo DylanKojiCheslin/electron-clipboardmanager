@@ -28,11 +28,11 @@ Subscribe to changes to highlighted text. Callback will receive a **SelectionMan
 }
 ```
 
-### clipboardManager.pause()
+### selectionManager.pause()
 Stops notifying subscribers
 
-### clipboardManager.resume()
+### selectionManager.resume()
 Resumes notifying subscribers
 
-### clipboardManager.start()
+### selectionManager.start()
 start monitoring highlighted text
