@@ -1,6 +1,6 @@
 # electron-selection-manager
 
-A utility for electron apps to monitor OS level highlighted text data.
+A utility for electron apps to monitor OS level highlighted text.
 
 forked from and heavily based on [Electron-ClipboardManager](https://github.com/Skaryon/electron-clipboardmanager)
 
