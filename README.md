@@ -23,7 +23,7 @@ selectionManager
 Subscribe to changes to highlighted text. Callback will receive a **SelectionManagerData** Object:
 ```javascript
 {
-  text: null,
+  text: null, // null by default, String obj otherwise
   time: new Date().getTime()
 }
 ```
