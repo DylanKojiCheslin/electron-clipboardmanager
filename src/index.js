@@ -1,10 +1,9 @@
 function SelectionManager (optionsIn) {
   const hash = require('object-hash')
-  function SelectionManagerData (selection) {
+  function SelectionManagerData () {
       Object.assign(this, {
         text: window.getSelection().toString()
       })
-    })
     this._hash = hash(this, {
       algorithm: 'md5'
     })
@@ -20,7 +19,7 @@ function SelectionManager (optionsIn) {
   Object.assign(this, {
     start: function () {
       window.setInterval(() => {
-        const data = new SelectionManagerData(selection)
+        const data = new SelectionManagerData()
         if (!last || last._hash !== data._hash) {
           last = data
           if (!paused) {
